@@ -1,27 +1,27 @@
 # Travel By Grace Website
 
-Official website repository for **Travel By Grace**, an owner-operated passenger transport and personalised getaway service based in Klein Brak River, Western Cape.
-
-## Brand direction
-
-- Elegant, calm and personal
-- Coastal turquoise colour palette
-- Personally owned, driven and hosted by Lucille du Toit
-- Marketing slogan: **Your Journey. My Personal Care.**
-- Primary services: airport transfers, customised Cape Town weekend getaways, local wine-tasting trips and personalised travel ideas
-
-## Repository structure
-
-```text
-public/                 Live website files
-public/assets/css/      Stylesheets
-public/assets/js/       JavaScript
-docs/                   Brand and project documentation
-.cpanel.yml             cPanel deployment instructions
-```
+Official website source for **Travel By Grace**, an owner-operated personal travel and transport service based in Klein Brak River, Western Cape.
 
 ## Deployment
 
-This repository is designed for cPanel Git Version Control. The `.cpanel.yml` file deploys the contents of `public/` to `/home/travelby/public_html/`.
+The repository is connected to cPanel Git Version Control.
 
-Do not place passwords, API keys, customer information or private booking details in this repository.
+1. In cPanel, open **Git Version Control**.
+2. Manage `travel-by-grace-website`.
+3. Select **Pull or Deploy**.
+4. Click **Update from Remote**.
+5. After the new commit appears, click **Deploy HEAD Commit**.
+
+The `.cpanel.yml` deployment file copies the contents of `public/` to `/home/travelby/public_html/`.
+
+## Website structure
+
+- `public/index.html` — main website
+- `public/privacy.html` — privacy policy
+- `public/booking-terms.html` — booking terms
+- `public/contact.php` — contact-form mail handler
+- `public/assets/` — styles, JavaScript and brand artwork
+
+## Important
+
+Do not store passwords, access tokens, customer information or payment credentials in this public repository.

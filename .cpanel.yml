@@ -2,10 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/travelby/public_html/
-    - /bin/mkdir -p $DEPLOYPATH
-    - /bin/cp public/index.html $DEPLOYPATH/index.html
-    - /bin/cp public/.htaccess $DEPLOYPATH/.htaccess
-    - /bin/mkdir -p $DEPLOYPATH/assets/css
-    - /bin/mkdir -p $DEPLOYPATH/assets/js
-    - /bin/cp public/assets/css/styles.css $DEPLOYPATH/assets/css/styles.css
-    - /bin/cp public/assets/js/main.js $DEPLOYPATH/assets/js/main.js
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - /bin/cp -R public/. "$DEPLOYPATH"
