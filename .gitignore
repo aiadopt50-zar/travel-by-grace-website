@@ -1,0 +1,28 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Logs and temporary files
+*.log
+tmp/
+.cache/
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+
+# Local deployment files
+public_html/
