@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-  <defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dff2f0"/><stop offset="1" stop-color="#fbfaf6"/></linearGradient></defs>
+  <defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f1e7ff"/><stop offset=".58" stop-color="#effcff"/><stop offset="1" stop-color="#fff9fe"/></linearGradient></defs>
   <rect width="800" height="600" fill="url(#a)"/>
-  <circle cx="650" cy="110" r="55" fill="#fff" opacity=".8"/>
-  <path d="M0 410c170-80 325-84 500-25 125 42 215 39 300 5v210H0Z" fill="#e8dcc2"/>
-  <path d="M-20 525c250-105 430-108 820-44" fill="none" stroke="#1e9fa8" stroke-width="44" stroke-linecap="round"/>
-  <path d="M80 340h420v88H80z" fill="#fff" stroke="#0d4d57" stroke-width="6"/>
-  <path d="M135 340v-82h310v82" fill="#a7d6d2" stroke="#0d4d57" stroke-width="6"/>
-  <path d="M190 258v-58h190v58" fill="#fff" stroke="#0d4d57" stroke-width="6"/>
-  <text x="224" y="240" fill="#0d4d57" font-family="Arial,sans-serif" font-size="26" font-weight="700">GEORGE</text>
-  <g transform="translate(485 145) rotate(-8)"><path d="M0 58 150 23l57 16-56 18-55 74-24 6 28-67-58 10-30 31-17 3 16-43-13-12Z" fill="#fff" stroke="#0d4d57" stroke-width="5"/></g>
-  <g transform="translate(455 392) scale(.6)"><path d="M10 39 19 18c2-5 6-8 12-9l36-3c7 0 12 3 17 8l10 13 8 3c4 1 6 5 6 9v12H3V43c0-2 3-4 7-4Z" fill="#fff" stroke="#0d4d57" stroke-width="3"/><circle cx="25" cy="52" r="9" fill="#0d4d57"/><circle cx="84" cy="52" r="9" fill="#0d4d57"/></g>
+  <circle cx="650" cy="110" r="55" fill="#ffd166" opacity=".78"/>
+  <path d="M0 410c170-80 325-84 500-25 125 42 215 39 300 5v210H0Z" fill="#f2e4ff"/>
+  <path d="M-20 525c250-105 430-108 820-44" fill="none" stroke="#ff2e93" stroke-width="44" stroke-linecap="round"/>
+  <path d="M80 340h420v88H80z" fill="#fff" stroke="#5b168f" stroke-width="6"/>
+  <path d="M135 340v-82h310v82" fill="#8be9f7" stroke="#5b168f" stroke-width="6"/>
+  <path d="M190 258v-58h190v58" fill="#fff" stroke="#5b168f" stroke-width="6"/>
+  <text x="224" y="240" fill="#5b168f" font-family="Arial,sans-serif" font-size="26" font-weight="700">GEORGE</text>
+  <g transform="translate(485 145) rotate(-8)"><path d="M0 58 150 23l57 16-56 18-55 74-24 6 28-67-58 10-30 31-17 3 16-43-13-12Z" fill="#fff" stroke="#7c3aed" stroke-width="5"/></g>
+  <g transform="translate(455 392) scale(.6)"><path d="M10 39 19 18c2-5 6-8 12-9l36-3c7 0 12 3 17 8l10 13 8 3c4 1 6 5 6 9v12H3V43c0-2 3-4 7-4Z" fill="#fff" stroke="#5b168f" stroke-width="3"/><circle cx="25" cy="52" r="9" fill="#2a0b47"/><circle cx="84" cy="52" r="9" fill="#2a0b47"/></g>
 </svg>
