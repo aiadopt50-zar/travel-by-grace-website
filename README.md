@@ -31,7 +31,7 @@ Open `http://localhost:8000`. Use a web server so that the root-relative asset p
 
 Publish directory: **`public`**. Build command: **none**. Serve this directory at the root of a preview hostname, not inside a URL subfolder.
 
-The branch’s `.cpanel.yml` copies the site to `/home/travelby/travel-by-grace-preview/`. Configure a separate preview subdomain with that document root and deploy this branch from a separate cPanel Git checkout. See [cPanel preview setup](docs/cpanel-setup.md).
+The branch’s `.cpanel.yml` copies the site to `/home/travelby/public_html/preview/`, matching the existing cPanel document root for [preview.travelbygrace.co.za](https://preview.travelbygrace.co.za). In the existing preview Git checkout, use **Update from Remote** followed by **Deploy HEAD Commit**. See [cPanel preview setup](docs/cpanel-setup.md).
 
 This branch does not replace the existing production `main` branch or its website. The preview uses `noindex` headers and a disallowing `robots.txt`; review those before a later public launch.
 

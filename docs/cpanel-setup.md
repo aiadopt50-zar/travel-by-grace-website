@@ -1,15 +1,26 @@
-# cPanel preview setup
+# cPanel preview deployment
 
-This branch deploys into a separate preview document root: `/home/travelby/travel-by-grace-preview/`.
+The preview domain and Git checkout are already configured in cPanel. The deployment path below matches the Domains screenshot supplied on 8 September 2026.
 
-1. Create a preview subdomain in cPanel and give it the document root above. Keep the existing website’s document root as it is.
-2. In **Git Version Control**, create a separate checkout of `https://github.com/aiadopt50-zar/travel-by-grace-website.git`, for example under `repositories/travel-by-grace-preview`.
-3. Check out `preview/boutique-weekends` in that preview repository. From the cPanel Terminal, the command inside that checkout is `git switch --track origin/preview/boutique-weekends`.
-4. In the preview repository’s **Pull or Deploy** view, use **Update from Remote**, confirm the branch and commit, then **Deploy HEAD Commit**.
-5. Open your configured preview hostname over HTTPS. Check the homepage, Lucille’s portrait, the Mamma Mia story, photo navigation and the WhatsApp draft form.
+| Setting | Value |
+| --- | --- |
+| Shareable preview URL | https://preview.travelbygrace.co.za |
+| Document root shown in cPanel | `/public_html/preview` |
+| Full deployment destination | `/home/travelby/public_html/preview/` |
+| Preview Git checkout | `/home/travelby/repositories/travel-by-grace-preview` |
+| Branch | `preview/boutique-weekends` |
 
-Only `public/` is published. There is no build step or server-side form service. The `.cpanel.yml` in this branch points to the preview folder, while the production configuration remains on `main`.
+## Publish the latest preview
 
-The site uses root-relative paths, so the preview should have its own hostname. A subfolder such as `/preview/` on the existing website needs path adaptation and is not the configuration of this branch.
+1. Open **Git Version Control** in cPanel and manage **Travel By Grace Preview**.
+2. Confirm the checked-out branch is `preview/boutique-weekends`.
+3. Open **Pull or Deploy** and click **Update from Remote**.
+4. Confirm HEAD shows the latest commit, then click **Deploy HEAD Commit**.
+5. Check that **Last Deployed SHA** matches HEAD.
+6. Open [the preview website](https://preview.travelbygrace.co.za) in a private browser tab and check the homepage, portrait, Mamma Mia gallery and WhatsApp draft form.
+
+Only `public/` is copied into the document root. There is no build step or server-side form service. The website uses root-relative paths, so use the preview subdomain URL above rather than the `/preview/` path on the main domain.
+
+An earlier branch revision copied files into `/home/travelby/travel-by-grace-preview/`, which did not match the configured domain. Pull and redeploy the corrected configuration to update the browser-visible preview. No domain-root change is needed for this correction.
 
 Before a future production release, agree the target deployment separately and update the preview-only robots/header settings and deployment destination.
