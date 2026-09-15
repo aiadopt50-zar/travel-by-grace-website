@@ -1,0 +1,63 @@
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+@media (max-width: 1020px) {
+  .primary-nav { gap: 16px; }
+  .primary-nav a { font-size: .88rem; }
+  .header-cta { display: none; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-copy { max-width: 780px; }
+  .hero-visual { max-width: 680px; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid, .about-grid, .vehicle-card, .faq-grid, .contact-grid { gap: 50px; }
+  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
+  .footer-grid > div:last-child { grid-column: 2; }
+}
+
+@media (max-width: 780px) {
+  .container { width: min(100% - 28px, 1180px); }
+  .section { padding: 78px 0; }
+  .header-inner { min-height: 72px; }
+  .brand img { width: 205px; }
+  .nav-toggle { display: block; }
+  .primary-nav { position: absolute; left: 14px; right: 14px; top: 72px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 12px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: var(--shadow-soft); }
+  .primary-nav.is-open { display: flex; }
+  .primary-nav a { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  .primary-nav a:last-child { border-bottom: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(4) { transform: translateY(-6px) rotate(-45deg); }
+  .hero { padding: 70px 0 80px; }
+  .hero-grid { gap: 40px; }
+  .hero-card { padding: 40px 16px 28px; }
+  .hero-badge { position: static; margin: 8px auto 0; width: fit-content; min-width: 0; text-align: center; }
+  .trust-grid, .service-grid, .journey-grid, .form-row { grid-template-columns: 1fr; }
+  .trust-grid { gap: 14px; }
+  .process-grid, .about-grid, .vehicle-card, .faq-grid, .contact-grid { grid-template-columns: 1fr; }
+  .process-copy { position: static; }
+  .portrait-wrap { max-width: 520px; margin-inline: auto; }
+  .portrait-caption { right: 6px; }
+  .vehicle-card { padding: 34px 24px; }
+  .faq-grid { gap: 25px; }
+  .contact-form { padding: 25px 20px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:last-child { grid-column: auto; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-bottom { flex-direction: column; }
+}
+
+@media (max-width: 520px) {
+  h1 { font-size: clamp(2.8rem, 15vw, 4.4rem); }
+  .hero-actions, .contact-actions, .legal-actions { flex-direction: column; }
+  .hero-actions .button, .contact-actions .button, .legal-actions .button { width: 100%; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .steps li { grid-template-columns: 52px 1fr; gap: 15px; }
+  .steps span { width: 46px; height: 46px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .floating-whatsapp span:last-child { display: none; }
+  .floating-whatsapp { width: 50px; height: 50px; padding: 0; justify-content: center; border-radius: 50%; font-size: 1.25rem; }
+  .thank-you-card { padding: 36px 22px; }
+}
