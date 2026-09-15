@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/travelby/public_html/
+    - export DEPLOYPATH=/home/travelby/public_html/preview/
     - /bin/mkdir -p "$DEPLOYPATH"
     - /bin/cp -R public/. "$DEPLOYPATH"

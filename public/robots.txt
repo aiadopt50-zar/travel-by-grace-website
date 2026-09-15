@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://travelbygrace.co.za/sitemap.xml
+Disallow: /

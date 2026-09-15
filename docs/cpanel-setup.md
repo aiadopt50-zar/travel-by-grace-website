@@ -1,22 +1,26 @@
-# cPanel Git Setup
+# cPanel preview deployment
 
-The repository is public and is connected to cPanel through HTTPS.
+The preview domain and Git checkout are already configured in cPanel. The deployment path below matches the Domains screenshot supplied on 8 September 2026.
 
-## Clone details
+| Setting | Value |
+| --- | --- |
+| Shareable preview URL | https://preview.travelbygrace.co.za |
+| Document root shown in cPanel | `/public_html/preview` |
+| Full deployment destination | `/home/travelby/public_html/preview/` |
+| Preview Git checkout | `/home/travelby/repositories/travel-by-grace-preview` |
+| Branch | `preview/boutique-weekends` |
 
-- **Clone URL:** `https://github.com/aiadopt50-zar/travel-by-grace-website.git`
-- **Repository Path:** `repositories/travel-by-grace-website`
-- **Repository Name:** `Travel By Grace Website`
+## Publish the latest preview
 
-Do not use `public_html` as the repository path. The `.cpanel.yml` file copies the finished website from `public/` to `/home/travelby/public_html/`.
+1. Open **Git Version Control** in cPanel and manage **Travel By Grace Preview**.
+2. Confirm the checked-out branch is `preview/boutique-weekends`.
+3. Open **Pull or Deploy** and click **Update from Remote**.
+4. Confirm HEAD shows the latest commit, then click **Deploy HEAD Commit**.
+5. Check that **Last Deployed SHA** matches HEAD.
+6. Open [the preview website](https://preview.travelbygrace.co.za) in a private browser tab and check the homepage, portrait, Mamma Mia gallery and WhatsApp draft form.
 
-## Deploying an update
+Only `public/` is copied into the document root. There is no build step or server-side form service. The website uses root-relative paths, so use the preview subdomain URL above rather than the `/preview/` path on the main domain.
 
-1. Open **Git Version Control** in cPanel.
-2. Manage the Travel By Grace repository.
-3. Open **Pull or Deploy**.
-4. Click **Update from Remote**.
-5. Confirm the newest commit is checked out.
-6. Click **Deploy HEAD Commit**.
+An earlier branch revision copied files into `/home/travelby/travel-by-grace-preview/`, which did not match the configured domain. Pull and redeploy the corrected configuration to update the browser-visible preview. No domain-root change is needed for this correction.
 
-The live website should then reflect the new GitHub version. Never place passwords, customer data, access tokens or payment credentials in this public repository.
+Before a future production release, agree the target deployment separately and update the preview-only robots/header settings and deployment destination.
